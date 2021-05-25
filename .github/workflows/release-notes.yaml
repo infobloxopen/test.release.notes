@@ -12,6 +12,7 @@ jobs:
         id: vars        
         run: |
           echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+          echo ls
       - name: Run release.notes image
         uses: infobloxopen/github.release.notes@v1.0.0
         with:
